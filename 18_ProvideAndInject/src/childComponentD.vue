@@ -1,4 +1,5 @@
 <script setup>
+import { provide } from "vue";
 import { inject } from "vue ";
 const empNameProvidedByParent = inject("empName");
 // empAgeProvidedByParent NOT provided by parent, second parameter is default value for inject function
@@ -14,6 +15,8 @@ const reactiveREAdONLYDataProvidedByParent = inject("readonlyData", "Nothing Fou
 setTimeout(() => { reactiveREAdONLYDataProvidedByParent.value = 'POI888' }, 2000);
 
 const incCountByOneProvidedByParent = inject("incCountByOne")
+
+provide("childMessage","I am lucky to have you.")
 </script>
 
 <template>

@@ -19,6 +19,7 @@ const userpasswordFocused = ref(false);
 
 const formData = ref({});
 const formValidated = ref(false);
+const hideLoginPoratl = ref(false);
 
 watch(
   () => formData,
@@ -77,7 +78,10 @@ function onSubmitHandler() {
   useremailFocused.value = true;
   userpasswordFocused.value = true;
 
-  if (formValidated.value) return console.log('Making API call')
+  if (formValidated.value) {
+    console.log('Making API call');
+    hideLoginPoratl.value = true;
+  }
   else return console.log('Show eRRor x_x');
 }
 
@@ -85,9 +89,11 @@ function onSubmitHandler() {
 
 <template>
   <section style="height: 100vh;width: 100vw;font-family: Comfortaa, cursive;"
-    class="bg-white m-0 flex justify-center items-center ">
+    class="bg-white m-0 flex flex-col justify-center items-center ">
 
-    <form @submit.prevent="onSubmitHandler"
+    <form
+    v-show="!hideLoginPoratl"
+    @submit.prevent="onSubmitHandler"
       class="border-[1px] font-bold p-10 bg-[ghostwhite] shadow-md shadow-purple-200 rounded-xl w-[600px] ">
       <h1 class="text-purple-400 text-4xl text-center mb-5">Login Portal <i class="pl-5 fa-solid fa-envelope"></i></h1>
 
@@ -104,6 +110,12 @@ function onSubmitHandler() {
             class="fa-solid fa-paper-plane pr-2"></i> Login</button>
       </div>
     </form>
+
+  <section 
+  v-show="hideLoginPoratl"
+  class="border-[1px] font-bold p-10 bg-[ghostwhite] shadow-md shadow-purple-200 rounded-xl w-[600px]">
+    <p class="text-center text-purple-400 text-3xl">User Authenticated <i class="pl-5 fa-solid fa-user-tie"></i></p>
+  </section>
 
   </section>
 </template>

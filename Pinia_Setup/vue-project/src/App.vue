@@ -26,9 +26,6 @@ import ChildB from './components/ChildB.vue';
       </p>
     </div>
 
-    <ChildA />
-    <ChildB />
-
     <p class="text-xl text-left my-5">
       <span class="font-bold text-yellow-400 pr-2">[]</span> A Store is an entity holding state and business logic that isn't bound to your Component tree.</p>
   
@@ -46,5 +43,15 @@ import ChildB from './components/ChildB.vue';
     <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2"> --> </span> It will create refs for every reactivity property.</p>
     <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2"> --> </span> This is useful when you are only using state from the store but <span class="text-yellow-400">NOT calling any action.</span></p>
     <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2"> --> </span> You can destructure actions directly from the store as they are bound to the store itself .</p>
+
+    <div class="bg-[#222] rounded-lg border-2 border-yellow-400 px-5">
+      <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2">$patch() </span> Method allow you to apply multiple changes at the same time with a partial state object. (OPTION)</p>
+      <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2">$patch() </span> Method also accepts a function to group this kind of mutations hat are difficult to apply with a patch object. (COMPOSITION)</p>
+    </div>
+    <ChildA />
+    <ChildB />
+
+
   </section>
+
 </template>

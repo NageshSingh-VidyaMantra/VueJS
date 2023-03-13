@@ -94,7 +94,7 @@ function onSubmitHandler() {
     <form
     v-show="!hideLoginPoratl"
     @submit.prevent="onSubmitHandler"
-      class="font-bold p-10 bg-purple-100 shadow-md shadow-pink-300 rounded-xl w-[600px]">
+      class="font-bold p-10 bg-purple-100 shadow-lg shadow-black rounded-xl w-[600px]">
       <h1 class="text-purple-400 text-4xl text-center mb-5">Login Portal <i class="pl-5 fa-solid fa-envelope"></i></h1>
 
       <Username :userName="userName" @userNameHandler="userNameHandler" :usernameEmpty="usernameEmpty"
@@ -113,7 +113,7 @@ function onSubmitHandler() {
 
   <section 
   v-show="hideLoginPoratl"
-  class="border-[1px] font-bold p-10 bg-purple-100 shadow-md shadow-pink-300 rounded-xl w-[600px]">
+  class="border-[1px] font-bold p-10 bg-purple-100 shadow-lg shadow-black rounded-xl w-[600px]">
     <p class="text-center text-purple-400 text-3xl">User Authenticated <i class="pl-5 fa-solid fa-user-tie"></i></p>
   </section>
 

@@ -13,7 +13,7 @@ function onChangeHandler(e) {
 
 <template>
   <div class="flex justify-between items-center my-5">
-    <label>Password</label>
+    <label class="text-purple-400 font-bold text-xl">Password</label>
     <div>
       <input v-model="uDob" @change="onChangeHandler" type="password" placeholder="Userpassword"
         class="w-[250px] rounded-md py-1 pl-2 border-[1px] border-purple-200 focus:outline-purple-400"

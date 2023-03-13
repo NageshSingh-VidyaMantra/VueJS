@@ -89,12 +89,12 @@ function onSubmitHandler() {
 
 <template>
   <section style="height: 100vh;width: 100vw;font-family: Comfortaa, cursive;"
-    class="bg-white m-0 flex flex-col justify-center items-center ">
+    class="bg-[#333] m-0 flex flex-col justify-center items-center ">
 
     <form
     v-show="!hideLoginPoratl"
     @submit.prevent="onSubmitHandler"
-      class="border-[1px] font-bold p-10 bg-[ghostwhite] shadow-md shadow-purple-200 rounded-xl w-[600px] ">
+      class="font-bold p-10 bg-purple-100 shadow-md shadow-pink-300 rounded-xl w-[600px]">
       <h1 class="text-purple-400 text-4xl text-center mb-5">Login Portal <i class="pl-5 fa-solid fa-envelope"></i></h1>
 
       <Username :userName="userName" @userNameHandler="userNameHandler" :usernameEmpty="usernameEmpty"
@@ -113,7 +113,7 @@ function onSubmitHandler() {
 
   <section 
   v-show="hideLoginPoratl"
-  class="border-[1px] font-bold p-10 bg-[ghostwhite] shadow-md shadow-purple-200 rounded-xl w-[600px]">
+  class="border-[1px] font-bold p-10 bg-purple-100 shadow-md shadow-pink-300 rounded-xl w-[600px]">
     <p class="text-center text-purple-400 text-3xl">User Authenticated <i class="pl-5 fa-solid fa-user-tie"></i></p>
   </section>
 

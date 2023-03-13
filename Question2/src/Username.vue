@@ -12,7 +12,7 @@ function onChangeHandler(e) {
 
 <template>
   <div class="flex justify-between items-center my-5">
-    <label>Name</label>
+    <label class="text-purple-400 font-bold text-xl">Name</label>
     <div>
       <input v-model="uName" @change="onChangeHandler" type="text"
         class="w-[250px] rounded-md py-1 pl-2 focus:border-2 focus:outline-purple-400"

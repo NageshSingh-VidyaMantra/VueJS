@@ -1,12 +1,22 @@
 // Setup Store
-import { defineStore } from 'pinia'
+import { defineStore, storeToRefs } from 'pinia'
+import myStoreA from './storeA';
 import { ref, computed } from 'vue'
 
-export const myStoreB = defineStore('counterB', () => {
-    const count = ref(22);
-    const double = computed(()=>{ return count.value * 2 });
-    function increment(){
-        return ++count.value
+
+export default defineStore('counterB', () => {
+    console.log('I am store B')
+    const storeA = myStoreA();
+
+    const { count: countA, double: doubleA } = storeToRefs(storeA);
+    const countB = ref(countA.value + 10)
+    const DAAddB = computed(() => {
+        let num = doubleA.value;
+        return (countB.value + num);
+    })
+
+    function funInB() {
+        return --countB.value
     }
-    return {count, double, increment}
+    return { countB, DAAddB, funInB }
 })

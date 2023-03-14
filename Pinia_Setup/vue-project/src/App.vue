@@ -1,6 +1,7 @@
 <script setup>
 import ChildA from './components/ChildA.vue';
 import ChildB from './components/ChildB.vue';
+import ChildC from './components/ChildC.vue';
 </script>
 
 <template>
@@ -48,9 +49,10 @@ import ChildB from './components/ChildB.vue';
       <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2">$patch() </span> Method allow you to apply multiple changes at the same time with a partial state object. (OPTION)</p>
       <p class="text-xl text-left my-5"><span class="text-yellow-400 pr-2">$patch() </span> Method also accepts a function to group this kind of mutations hat are difficult to apply with a patch object. (COMPOSITION)</p>
     </div>
+    
     <ChildA />
     <ChildB />
-
+    <ChildC />
 
   </section>
 
